@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Video introduction of the application." />
+    <title>Application Introduction</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-gray-900 text-white py-4">
+      <div
+        class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold text-center sm:text-left mb-2 sm:mb-0">
+          Application Introduction
+        </h1>
+        <a href="index.html" class="text-blue-400 hover:underline text-center"
+          >Back to Portfolio</a
+        >
+      </div>
+    </header>
+
+    <!-- Video Introduction Section -->
+    <section id="video-introduction" class="bg-gray-50 py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-8">
+          Application Introduction
+        </h2>
+        <p class="text-gray-600 mb-6 text-sm sm:text-base">
+          Watch this video to learn more about the features and benefits of my
+          application.
+        </p>
+        <div class="relative">
+          <!-- Video Player -->
+          <video
+            controls
+            class="w-full max-w-full sm:max-w-4xl mx-auto rounded-lg shadow-lg"
+          >
+            <source src="./Videos/Video_DescoSpace.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-4">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <p class="text-sm sm:text-base">
+          &copy; 2025 Khaddar Mohamed Reda. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
