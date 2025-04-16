@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Your portfolio showcasing your work and skills."
+    />
+    <meta name="author" content="Khaddar Mohamed Reda" />
+    <title>Portfolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Alpine.js -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="shadow-inner" x-data="{ open: false }">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div class="relative flex items-center justify-between h-16">
+            <!-- Logo -->
+            <div class="flex-shrink-0 px-2 flex items-center">
+              <a class="md:text-lg font-bold text-gray-900" href="#"
+                >M.Reda Khaddar</a
+              >
+            </div>
+
+            <!-- Navigation -->
+            <div class="hidden sm:block">
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="text-gray-900 hover:text-white px-3 py-2 md:text-lg font-medium"
+                  >Home</a
+                >
+                <a
+                  href="#about"
+                  class="text-gray-900 hover:text-white px-3 py-2 md:text-lg font-medium"
+                  >About</a
+                >
+                <a
+                  href="#projects"
+                  class="text-gray-900 hover:text-white px-3 py-2 md:text-lg font-medium"
+                  >Projects</a
+                >
+                <a
+                  href="#contact"
+                  class="text-gray-900 hover:text-white px-3 py-2 md:text-lg font-medium"
+                  >Contact</a
+                >
+              </div>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+              <button
+                @click="open = !open"
+                class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Open main menu</span>
+                <svg
+                  :class="{ 'block': !open, 'hidden': open }"
+                  class="block h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  />
+                </svg>
+                <svg
+                  :class="{ 'block': open, 'hidden': !open }"
+                  class="hidden h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="sm:hidden" id="mobile-menu" x-show="open">
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <a
+              href="#"
+              class="text-gray-900 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-gray-900 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >About</a
+            >
+            <a
+              href="#projects"
+              class="text-gray-900 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >Projects</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-900 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- About/Profile Section -->
+      <section id="about">
+        <section id="profile">
+          <div class="section__pic-container">
+            <img
+              src="imgs/Profile_img_1.jpg"
+              alt="Reda Khaddar"
+              class="section__pic"
+            />
+          </div>
+          <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">KHADDAR Mohamed Reda</h1>
+            <p class="section__text__p2">Full Stack Developer</p>
+            <p class="section__text__p2 skills">PHP ,Laravel, C#, React</p>
+
+            <!-- Updated Buttons with Icons -->
+            <div class="btn-container d-flex flex-wrap gap-3 mt-3">
+              <a
+                href="https://drive.google.com/file/d/1iG0OPchQs8lLaDLSpJ8Wv0bBb_Gan7tS/view?usp=sharing"
+                class="btn btn-primary d-flex align-items-center gap-2"
+              >
+                <i data-lucide="download" class="w-5 h-5"></i> Download CV
+              </a>
+              <a
+                href="mailto:reda.khaddar1@gmail.com"
+                onclick="location.href='#contact'"
+                class="btn btn-secondary d-flex align-items-center gap-2"
+              >
+                <i data-lucide="mail" class="w-5 h-5"></i> Contact
+              </a>
+            </div>
+
+            <!-- Socials -->
+            <link
+              href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+              rel="stylesheet"
+            />
+
+            <div id="socials-container" class="mt-4 d-flex gap-3">
+              <!-- LinkedIn Icon -->
+              <a
+                href="https://www.linkedin.com/in/khaddar-mohamed-reda/"
+                class="social-icon linkedin"
+              >
+                <i class="bi bi-linkedin" style="font-size: 35px"></i>
+              </a>
+
+              <!-- GitHub Icon -->
+              <a href="https://github.com/RedaMed07" class="social-icon gitHub">
+                <i class="bi bi-github" style="font-size: 35px"></i>
+              </a>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <!-- About Me and Education Section -->
+    <section id="about-me" class="bg-gray-50 py-16">
+      <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+        <h2 class="text-4xl font-extrabold text-gray-900 mb-12">About Me</h2>
+        <div class="grid grid-cols-1 gap-12">
+          <!-- About Me -->
+          <div class="space-y-6">
+            <h3
+              class="text-2xl font-semibold text-gray-800 flex items-center justify-center gap-2"
+            >
+              <i class="bi bi-person-circle text-blue-500 text-3xl"></i> Who I
+              Am
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              My name is <strong>Khaddar Mohamed Reda</strong>, and I am a
+              passionate <strong>Full Stack Developer</strong>. I specialize in
+              creating dynamic and efficient web applications.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              I have worked on various projects during my studies, including a
+              <strong>pharmacy management system</strong> and a
+              <strong>dental clinic management system</strong>.
+            </p>
+          </div>
+
+          <!-- Education -->
+          <div class="space-y-6">
+            <h3
+              class="text-2xl font-semibold text-gray-800 flex items-center justify-center gap-2"
+            >
+              <i class="bi bi-mortarboard text-blue-500 text-3xl"></i> My
+              Education
+            </h3>
+            <ul class="space-y-4">
+              <li class="flex items-start justify-center gap-4">
+                <i class="bi bi-book text-blue-500 text-2xl"></i>
+                <div>
+                  <p class="text-gray-800 font-medium">
+                    Licence in Informatique Réseau et Multimédia
+                  </p>
+                  <p class="text-gray-600">From <em>Supmir</em></p>
+                </div>
+              </li>
+              <li class="flex items-start justify-center gap-4">
+                <i class="bi bi-book text-blue-500 text-2xl"></i>
+                <div>
+                  <p class="text-gray-800 font-medium">
+                    Diploma in Technicien Spécialisé en Développement
+                    Informatique
+                  </p>
+                  <p class="text-gray-600">From <em>Institut CIEL</em></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-gray-100 py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">
+          My Projects
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img
+              src="imgs/screen1.png"
+              alt="Project 1"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Dental clinic managment
+              </h3>
+              <p class="text-gray-600 mt-2">
+                This project was developed using C#. It helps manage patients
+                and their data efficiently.
+              </p>
+              <a
+                href="#"
+                class="text-blue-500 hover:underline mt-4 inline-block"
+                >View Project</a
+              >
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img
+              src="imgs/project2.jpg"
+              alt="Project 2"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Project Title 2
+              </h3>
+              <p class="text-gray-600 mt-2">
+                Brief description of the project goes here.
+              </p>
+              <a
+                href="#"
+                class="text-blue-500 hover:underline mt-4 inline-block"
+                >View Project</a
+              >
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img
+              src="imgs/project3.jpg"
+              alt="Project 3"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Project Title 3
+              </h3>
+              <p class="text-gray-600 mt-2">
+                Brief description of the project goes here.
+              </p>
+              <a
+                href="#"
+                class="text-blue-500 hover:underline mt-4 inline-block"
+                >View Project</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <!-- Optional Footer Content -->
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Activate Lucide Icons -->
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
