@@ -370,6 +370,11 @@ section {
 .social-icon.gitHub:hover {
   color: black;
 }
+.social-icon.instagram:hover {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 /* Responsive design */
 @media (max-width: 1024px) {
